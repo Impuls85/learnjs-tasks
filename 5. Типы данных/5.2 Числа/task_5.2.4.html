@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Бесконечный цикл по ошибке</title>
+  </head>
+  <body>
+    <script>
+      let i = 0;
+      while (i != 10) {
+        i += 0.2;
+      } //цикл бесконечен из-за потери точности перевода числа 0.2 в двоичную систему исчисления. Сумма 9.8... + 0.2 (значение 9.8... указано условно) "перешагнет" через значение 10 и цикл никогда не остановится
+    </script>
+  </body>
+</html>

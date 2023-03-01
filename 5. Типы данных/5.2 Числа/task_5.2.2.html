@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Почему 6.35.toFixed(1) == 6.3?</title>
+  </head>
+  <body>
+    <script>
+      alert((1.35).toFixed(1));
+      alert((6.35).toFixed(1)); //Округляется до 6.3 по причине потери точности при переводе в бинарную систему исчисления
+    </script>
+  </body>
+</html>

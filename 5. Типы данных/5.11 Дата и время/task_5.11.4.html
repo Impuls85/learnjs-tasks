@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Какой день месяца был много дней назад?</title>
+  </head>
+  <body>
+    <script>
+      function getDateAgo(date, days) {
+        let dateCopy = new Date(date);
+
+        dateCopy.setDate(date.getDate() - days);
+        return dateCopy.getDate();
+      }
+
+      let date = new Date(2023, 2, 21);
+
+      alert(getDateAgo(date, 1)); // 20, (21 Feb 2023)
+      alert(getDateAgo(date, 5)); // 16, (16 Feb 2023)
+      alert(getDateAgo(date, 365)); // 21, (21 Feb 2022)
+    </script>
+  </body>
+</html>
