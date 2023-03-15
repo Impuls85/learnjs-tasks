@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вычислить сумму чисел до данного</title>
+  </head>
+  <body>
+    <script>
+      let n = +prompt("Введите число n", "");
+      function sumTo(n) {
+        if (n == 1) {
+          return n;
+        } else {
+          return n + sumTo(n - 1); //Самое медленное решение
+        }
+      }
+
+      alert(sumTo(n)); //sumTo(100000) не дает результата
+    </script>
+  </body>
+</html>

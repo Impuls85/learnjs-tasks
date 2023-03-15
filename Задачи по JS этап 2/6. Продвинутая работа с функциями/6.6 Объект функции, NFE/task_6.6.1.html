@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Установка и уменьшение значения счётчика</title>
+  </head>
+  <body>
+    <script>
+      function makeCounter() {
+        let count = 0;
+
+        function counter() {
+          return count++;
+        }
+
+        counter.set = (value) => (count = value);
+
+        counter.decrease = () => count--;
+
+        return counter;
+      }
+
+      let counter = makeCounter();
+
+      alert(counter()); // 0
+      alert(counter()); // 1
+
+      alert(counter.set(7)); // 7
+      alert(counter.decrease()); // 7
+      alert(counter.decrease()); //6
+    </script>
+  </body>
+</html>
